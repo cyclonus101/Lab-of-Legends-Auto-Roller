@@ -5,17 +5,17 @@ created by Cyclonus101
 
 Launched June 2/21
 
-This work was original based on my autopassive scrummer script, but with the June 2nd update, 
-a lot of changes have been made, namely you no longer need to reselect your champion, 
-you can reroll passives infinite. This work is an update to the original to be functional 
-with the new upgraded labs
+This work was original based on my autopassive scrummer script, but with the June 2nd update,  
+a lot of changes have been made. You no longer need to reselect your champion to avoid using your 
+initial rerolls. You can now reroll infinitely after champion select.  
+This work is an update to the original to be functional with the new upgraded labs. 
 
-2.0 June 2/21
-Got rid of selecting champion, focuses exclusively on finding the correct passive
-2.1 June 6/12
--Updated GUI to show base delay between searches 
--Changed adjustable delay resolution to 25ms instead of 50ms, up to 200ms
--fixed the visual issue where the passive is double click
+2.0 June 2/21 
+Got rid of selecting champion, focuses exclusively on finding the correct passive 
+2.1 June 6/12 
+-Updated GUI to show base delay between searches  
+-Changed adjustable delay resolution to 25ms instead of 50ms, up to 200ms  
+-fixed the visual issue where the passive is double click  
 
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
