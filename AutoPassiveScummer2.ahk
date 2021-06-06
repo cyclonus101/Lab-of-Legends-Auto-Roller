@@ -1,15 +1,20 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #SingleInstance, force
 
-; June 2/21
-;2 Released to github
+; 2.0 June 2/21
+; Got rid of selecting champion, focuses exclusively on finding the correct passive
+; 2.1 June 6/12
+; Updated GUI to be more concise with search delays and fixed double clicking passives 
 
-;do not edit below
+;Created by cyclonus101
 
+;--------------------------------------------------------------------------------------------------
+; Hardcoded Variables
+;--------------------------------------------------------------------------------------------------
 IconLocationsListX1 := [621,1247,1873]
 IconLocationsListX2 := [577,577,577]
 IconLocationsListY1 := [817,1443,2069]
@@ -38,25 +43,24 @@ IconListWQHD :=  ["icons-1440\advancedpreperations-icon-1440.bmp","icons-1440\ba
 
 IconListFHD :=  ["icons-1080\advancedpreperations-icon-1080.bmp","icons-1080\battlefieldtraining-icon-1080.bmp","icons-1080\blackmarket-icon-1080.bmp","icons-1080\bouncingblades-icon-1080.bmp","icons-1080\cantstopwontstop-icon-1080.bmp","icons-1080\clocksetter-icon-1080.bmp","icons-1080\crush-icon-1080.bmp","icons-1080\domination-icon-1080.bmp","icons-1080\dragonrage-icon-1080.bmp","icons-1080\duelist-icon-1080.bmp","icons-1080\emptymind-icon-1080.bmp","icons-1080\endurance-icon-1080.bmp","icons-1080\enfeeblingstrike-icon-1080.bmp","icons-1080\evolution-icon-1080.bmp","icons-1080\flexiblegameplan-icon-1080.bmp","icons-1080\grit-icon-1080.bmp","icons-1080\highereducation-icon-1080.bmp","icons-1080\holdthemoff-icon-1080.bmp","icons-1080\immortality-icon-1080.bmp","icons-1080\lilbuddies-icon-1080.bmp","icons-1080\manaflow-icon-1080.bmp","icons-1080\naturesfury-icon-1080.bmp","icons-1080\newstudent-icon-1080.bmp","icons-1080\outofthegates-icon-1080.bmp","icons-1080\raidingparty-icon-1080.bmp","icons-1080\rockbearden-icon-1080.bmp","icons-1080\rushthemdown-icon-1080.bmp","icons-1080\seatofpower-icon-1080.bmp","icons-1080\sharedbounty-icon-1080.bmp","icons-1080\sharingiscaring-icon-1080.bmp","icons-1080\sorcery-icon-1080.bmp","icons-1080\sorcery-icon-1080.bmp","icons-1080\spellslinger-icon-1080.bmp","icons-1080\terraforming-icon-1080.bmp","icons-1080\thebestdefense-icon-1080.bmp","icons-1080\thievestools-icon-1080.bmp","icons-1080\triferianmight-icon-1080.bmp","icons-1080\vanguardlookout-icon-1080.bmp","icons-1080\welcomegifts-icon-1080.bmp","icons-1080\wildcreation-icon-1080.bmp","icons-1080\yippgenius-icon-1080.bmp"]
 
-;
-DelayResolution := 50
+;--------------------------------------------------------------------------------------------------
+; Runtime Variables
+;--------------------------------------------------------------------------------------------------
+;file location to icons, initialled to the first alphabetically avaliable passive in 1080p
+myPassive := "icons-1080\advancedpreperations-icon-1080.bmp"
 
+;helps with image recognition,  increase if icon isn't working, max 255
+imageVariation :=  165 
+;
+Resolution := 1 ; 1= 1080, 2=1440
+; Delays between searching for new passive
+BaseDelay := 250
+Delay := 0
+DelayResolution := 25
+; Future Use
 currentattempts := 0
 totalattempts := 0
 totalfinds := 0
-;do not edit above
-
-;--------------------------------------------------------------------------------------------------
-; variables
-;--------------------------------------------------------------------------------------------------
-;file location to icons
-myPassive := "icons-1080\advancedpreperations-icon-1080.bmp"
-;helps with image recogniztion
-imageVariation :=  155 ;increase if icon isn't working, max 255
-;
-Resolution := 1 ; 1= 1080, 2=1440
-Delay := 0
-
 
 ;--------------------------------------------------------------------------------------------------
 ; GUI Stuff
@@ -69,23 +73,33 @@ Gui, Add, Picture, x0 y0, labsbackground.png
 Gui, Font, Times New Roman, s30, cwhite
 
 
+;Resolution dropdown box
 Gui, add , DropDownList, xm y165 w140 AltSubmit vResolution gSubmitResolution , 1920x1080||2560x1440|
 
-Gui, add , DropDownList, xm y245 w120 AltSubmit vDelay gSubmitDelay, 50ms||100ms|150ms|200ms|250ms|300ms
-
+;passive dropdown box
 Gui, add , DropDownList, xm y205 w260 AltSubmit vPassive gSubmitPassive , Advanced Preperations||Battlefield Training|Black Market Discount|Bouncing Blades|Can't Stop; Won't Stop|Clock Setter|Crush|Domination|Dragon's Rage|Duelist|Empty Mind|Endurance|Enfeebling Strike|Evolution|Flexible Gameplan|Grit|Higher Education|Hold Them Off|Immortality|Lil' Buddies|Manaflow|Nature's Revenge|New Student|Out the Gates|Raiding Party|Rockbear Den|Rush Them Down|Seat of Power|Share the Bounty|Sharing is Caring|Sorcery|Slow But Steady|Spellslinger|Terraforming|The Best Defense...|Thieves' Tools|Trifarian Might|Vanguard Lookout|Welcome Gifts|Wild Inspiration|Yipp's Genius|
 Gui, -AlwaysOntop
+
+;Base delay text box
+Gui, Color, E1E1E1
+Gui, add ,text,  xm y245 w100 h33 Center +border 0x200, %BaseDelay% ms  +
+
+;Additional delay dropdown box
+Gui, add , DropDownList, xm+105 y245 w100 AltSubmit vDelay gSubmitDelay, 0ms||25ms|50ms|75ms|100ms|125ms|150ms|175ms|200ms
+
+
 Gui, Show, x0 y0 w633 h302, Labs Auto Selector GUI Edition 2.0
-
-;Gui, Add, Text, xm y130 w40 vtotalattempts, % totalattempts := 0 ", totalattempts"
-;Gui, Add, Text, xm+100 y130 w40 vtotalfinds, % totalfinds := 0 ", totalfinds"
-
 
 return
 
 
 GuiClose:
 ExitApp
+
+
+;--------------------------------------------------------------------------------------------------
+;Functions for updating variables from dropdown menu boxes
+;--------------------------------------------------------------------------------------------------
 
 SubmitDelay:
 	Gui,+OwnDialogs
@@ -111,20 +125,16 @@ SubmitResolution:
 	;msgbox,% Resolution
 	return
 
-;UpdateTotalSearches
-
-
-;UpdateSuccessfulSearches
-
 ;--------------------------------------------------------------------------------------------------
 ; image searching
 ;--------------------------------------------------------------------------------------------------
 
+;Start Button
 ^m::
 
+;If image search fails with error 2 then the file path is incorrect 
+;or there is a typo in the icon name
 
-
-;If image search fails with error 2 then you did setup the file path correctly
 ImageSearch, FoundX, FoundY, 0,0, 0,0, %myPassive%
 	if(ErrorLevel=2)
 	{
@@ -135,13 +145,15 @@ ImageSearch, FoundX, FoundY, 0,0, 0,0, %myPassive%
 
 while(true)
 {	
-			
-	MouseClick, left, RerollX*ResolutionScaleX[Resolution], RerollY*ResolutionScaleY[Resolution] ;click reroll
-	sleep 350 + (Delay*DelayResolution)
+	;click reroll, then wait for menu to update		
+	MouseClick, left, RerollX*ResolutionScaleX[Resolution], RerollY*ResolutionScaleY[Resolution] 
+	sleep BaseDelay + (Delay*DelayResolution)	
 	
-	;Image Search First icon
+	
+	;Image Search 1st icon
 	if(Resolution==1)
 	ImageSearch, FoundX, FoundY, 466,432, 616,592, *%imageVariation% %myPassive%	
+	
 	else if(Resolution==2)
 	ImageSearch, FoundX, FoundY, 621,577, 817,790, *%imageVariation% %myPassive%	
 		
@@ -149,18 +161,14 @@ while(true)
 		{
 			MouseClick, left, PassiveListX[Passive1]*ResolutionScaleX[Resolution], PassiveY*ResolutionScaleY[Resolution] 
 			sleep  200
-			MouseClick, left, ButtonListX[RunConfirm]*ResolutionScaleX[Resolution],ButtonListY[RunConfirm]*ResolutionScaleY[Resolution] 
-			;MsgBox, Total Attempts %totalattempts% `n`rCurrent Attempts %currentattempts% `n`rFound Power at Icon 1
-					
-			currentattempts=0
-		
+			
 			return
 		}
 		
-	;Image Search second icon
-	
+	;Image Search 2nd icon	
 	if(Resolution==1)
 	ImageSearch, FoundX, FoundY, 935,432,1085,592, *%imageVariation% %myPassive% 
+	
 	else if(Resolution==2)
 	ImageSearch, FoundX, FoundY, 1247,577, 1443,790, *%imageVariation% %myPassive% 
 	
@@ -168,18 +176,15 @@ while(true)
 		{
 			MouseClick, left, PassiveListX[Passive2]*ResolutionScaleX[Resolution], PassiveY*ResolutionScaleY[Resolution] 
 			sleep  200
-			MouseClick, left, ButtonListX[RunConfirm]*ResolutionScaleX[Resolution],ButtonListY[RunConfirm]*ResolutionScaleY[Resolution] 
-			;MsgBox, Total Attempts %totalattempts% `n`rCurrent Attempts %currentattempts% `n`rFound Power at Icon 2
-					
-			currentattempts=0				
 
 			return
 		}
 
 		
-	;Image Search second icon	
+	;Image Search 3rd icon	
 	if(Resolution==1)
 	ImageSearch, FoundX, FoundY, 1405,432,1555,592, *%imageVariation% %myPassive% 
+	
 	else if(Resolution==2)
 	ImageSearch, FoundX, FoundY, 1873,577, 2069,790, *%imageVariation% %myPassive% 
 	
@@ -187,14 +192,10 @@ while(true)
 		{
 			MouseClick, left, PassiveListX[Passive3]*ResolutionScaleX[Resolution], PassiveY*ResolutionScaleY[Resolution] 
 			sleep  200
-			MouseClick, left, ButtonListX[RunConfirm]*ResolutionScaleX[Resolution],ButtonListY[RunConfirm]*ResolutionScaleY[Resolution]  
-			;MsgBox, Total Attempts %totalattempts% `n`rCurrent Attempts %currentattempts% `n`rFound Power at Icon 3
-			
-			currentattempts=0		
-			
+	
 			return
 		}	
-	
+		
 }
 
 
