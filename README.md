@@ -39,9 +39,9 @@ then you should restart the script and Legends of Runeterra. Otherwise it probab
 
 Some bugs I've discovered so far:
 
-~~1) If you switch to 2560x1440 you need to select Advanced Preparations in the passive menu again~~
-2) Because Riot decided to reuse the sorcery icon for slow but steady, selecting either as your starter passive will select the first one it sees
-3) Sometimes the icon will be skipped over its in a certain positive (I.E middle) 
-4) Sometimes the wrong passive might be selected
+~~1) If you switch to 2560x1440 you need to select Advanced Preparations in the passive menu again~~  
+2) Because Riot decided to reuse the sorcery icon for slow but steady, selecting either as your starter passive will select the first one it sees  
+3) Sometimes the icon will be skipped over its in a certain positive (I.E middle)   
+4) Sometimes the wrong passive might be selected  
 
 Hopefully I'll fix them in the future.
