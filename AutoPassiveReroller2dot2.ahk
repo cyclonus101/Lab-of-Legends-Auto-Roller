@@ -9,6 +9,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Got rid of selecting champion, focuses exclusively on finding the correct passive
 ; 2.1 June 6/12
 ; Updated GUI to be more concise with search delays and fixed double clicking passives 
+; 2.2 June 7/21
+;Fixed bug where changing passives before changing resolution would not switch image search to new resolution
 
 ;Created by cyclonus101
 
@@ -122,6 +124,12 @@ SubmitPassive:
 SubmitResolution:
 	Gui,+OwnDialogs
 	Gui,Submit,NoHide	
+	
+	if(Resolution==1)
+	myPassive := IconListFHD[Passive]
+	if(Resolution==2)
+	myPassive := IconListWQHD[Passive]
+	
 	;msgbox,% Resolution
 	return
 
