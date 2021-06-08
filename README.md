@@ -16,6 +16,8 @@ Got rid of selecting champion, focuses exclusively on finding the correct passiv
 -Updated GUI to show base delay between searches   
 -Changed adjustable delay resolution to 25ms instead of 50ms, up to 200ms  
 -fixed the visual issue where the passive is double click  
+2.2 June 7/21
+Fixed bug where changing passives before changing resolution would not switch image search to new resolution
 
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
@@ -37,7 +39,7 @@ then you should restart the script and Legends of Runeterra. Otherwise it probab
 
 Some bugs I've discovered so far:
 
-1) If you switch to 2560x1440 you need to select Advanced Preparations in the passive menu again
+~~1) If you switch to 2560x1440 you need to select Advanced Preparations in the passive menu again~~
 2) Because Riot decided to reuse the sorcery icon for slow but steady, selecting either as your starter passive will select the first one it sees
 3) Sometimes the icon will be skipped over its in a certain positive (I.E middle) 
 4) Sometimes the wrong passive might be selected
