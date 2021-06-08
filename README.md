@@ -27,7 +27,7 @@ Instructions:
 
 1) Download as zip file
 2) Unzip project into a folder
-3) Double click the AutoPassiveReroller2dot1.ahk file to start up the GUI
+3) Double click the AutoPassiveReroller2dot2.ahk file to start up the GUI
 4) Select Resolution (1920x1080 or 2560x1440 is currently supported)
 6) Select Passive
 7) Select additional delay if the script runs too fast between scenes
