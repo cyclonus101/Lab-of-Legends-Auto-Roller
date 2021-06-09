@@ -1,5 +1,4 @@
-# Lab of Legends Auto Reroller
- Auto Passive Scummer
+# Lab of Legends Auto Roller
 
 created by Cyclonus101
 
@@ -17,7 +16,7 @@ Got rid of selecting champion, focuses exclusively on finding the correct passiv
 -Changed adjustable delay resolution to 25ms instead of 50ms, up to 200ms  
 -fixed the visual issue where the passive is double click  
 2.2 June 7/21  
-Fixed bug where changing passives before changing resolution would not switch image search to new resolution
+-Fixed bug where changing passives before changing resolution would not switch image search to new resolution
 
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
@@ -27,7 +26,7 @@ Instructions:
 
 1) Download as zip file
 2) Unzip project into a folder
-3) Double click the AutoPassiveReroller2dot2.ahk file to start up the GUI
+3) Double click the AutoPassiveRoller2dot2.ahk file to start up the GUI
 4) Select Resolution (1920x1080 or 2560x1440 is currently supported)
 6) Select Passive
 7) Select additional delay if the script runs too fast between scenes
