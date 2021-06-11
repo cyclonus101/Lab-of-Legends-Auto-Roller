@@ -18,6 +18,10 @@ Got rid of selecting champion, focuses exclusively on finding the correct passiv
 2.2 June 7/21  
 -Fixed bug where changing passives before changing resolution would not switch image search to new resolution
 
+June 10/21
+-Fixed typo in evolution passive icon name  
+-Changed the delay text and delay dropdown box to align next to each other in the GUI  
+
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
 Required: Only works on windows 7 or newer and requires AutoHotKey to be installed
@@ -26,7 +30,7 @@ Instructions:
 
 1) Download as zip file
 2) Unzip project into a folder
-3) Double click the AutoPassiveRoller2dot2.ahk file to start up the GUI
+3) Double click the AutoPassiveRoller2dot2.ahk file to start up the GUI (start script from the folder)
 4) Select Resolution (1920x1080 or 2560x1440 is currently supported)
 6) Select Passive
 7) Select additional delay if the script runs too fast between scenes
