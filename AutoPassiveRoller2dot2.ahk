@@ -84,7 +84,7 @@ Gui, -AlwaysOntop
 
 ;Base delay text box
 Gui, Color, E1E1E1
-Gui, add ,text,  xm y245 w100 h33 Center +border 0x200, %BaseDelay% ms  +
+Gui, add ,text,  xm y245 w105 h33 Center +border 0x200, %BaseDelay% ms  +
 
 ;Additional delay dropdown box
 Gui, add , DropDownList, xm+105 y245 w100 AltSubmit vDelay gSubmitDelay, 0ms||25ms|50ms|75ms|100ms|125ms|150ms|175ms|200ms
