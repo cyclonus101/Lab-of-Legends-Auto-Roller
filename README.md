@@ -18,7 +18,7 @@ Got rid of selecting champion, focuses exclusively on finding the correct passiv
 2.2 June 7/21  
 -Fixed bug where changing passives before changing resolution would not switch image search to new resolution
 
-June 10/21
+June 10/21  
 -Fixed typo in evolution passive icon name  
 -Changed the delay text and delay dropdown box to align next to each other in the GUI  
 
