@@ -23,8 +23,8 @@ June 10/21
 -Changed the delay text and delay dropdown box to align next to each other in the GUI  
 
 June 12/21
--Added 1366x768 support
--Fixed some typos
+-Added 1366x768 support  
+-Fixed some typos  
 
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
@@ -50,5 +50,6 @@ Some bugs I've discovered so far:
 2) Because Riot decided to reuse the sorcery icon for slow but steady, selecting either as your starter passive will select the first one it sees  
 3) Sometimes the icon will be skipped over its in a certain positive (I.E middle)   
 4) Sometimes the wrong passive might be selected  
+5) Error: Path to File Icon Not found generally means there's a typo in the script or icon image
 
 Hopefully I'll fix them in the future.
