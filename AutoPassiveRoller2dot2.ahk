@@ -12,6 +12,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; 2.2 June 7/21
 ;Fixed bug where changing passives before changing resolution would not switch image search to new resolution
 
+
+; June 12/21
+;Added 1368x1768 support
 ;Created by cyclonus101
 
 ;--------------------------------------------------------------------------------------------------
@@ -44,6 +47,7 @@ ResolutionScaleY := [.75, 1]
 IconListWQHD :=  ["icons-1440\advancedpreperations-icon-1440.bmp","icons-1440\battlefieldtraining-icon-1440.bmp","icons-1440\blackmarket-icon-1440.bmp","icons-1440\bouncingblades-icon-1440.bmp","icons-1440\cantstopwontstop-icon-1440.bmp","icons-1440\clocksetter-icon-1440.bmp","icons-1440\crush-icon-1440.bmp","icons-1440\domination-icon-1440.bmp","icons-1440\dragonrage-icon-1440.bmp","icons-1440\duelist-icon-1440.bmp","icons-1440\emptymind-icon-1440.bmp","icons-1440\endurance-icon-1440.bmp","icons-1440\enfeeblingstrike-icon-1440.bmp","icons-1440\evolution-icon-1440.bmp","icons-1440\flexiblegameplan-icon-1440.bmp","icons-1440\grit-icon-1440.bmp","icons-1440\highereducation-icon-1440.bmp","icons-1440\holdthemoff-icon-1440.bmp","icons-1440\immortality-icon-1440.bmp","icons-1440\lilbuddies-icon-1440.bmp","icons-1440\manaflow-icon-1440.bmp","icons-1440\naturesfury-icon-1440.bmp","icons-1440\newstudent-icon-1440.bmp","icons-1440\outofthegates-icon-1440.bmp","icons-1440\raidingparty-icon-1440.bmp","icons-1440\rockbearden-icon-1440.bmp","icons-1440\rushthemdown-icon-1440.bmp","icons-1440\seatofpower-icon-1440.bmp","icons-1440\sharedbounty-icon-1440.bmp","icons-1440\sharingiscaring-icon-1440.bmp","icons-1440\sorcery-icon-1440.bmp","icons-1440\sorcery-icon-1440.bmp","icons-1440\spellslinger-icon-1440.bmp","icons-1440\terraforming-icon-1440.bmp","icons-1440\thebestdefense-icon-1440.bmp","icons-1440\thievestools-icon-1440.bmp","icons-1440\triferianmight-icon-1440.bmp","icons-1440\vanguardlookout-icon-1440.bmp","icons-1440\welcomegifts-icon-1440.bmp","icons-1440\wildcreation-icon-1440.bmp","icons-1440\yippgenius-icon-1440.bmp"]
 
 IconListFHD :=  ["icons-1080\advancedpreperations-icon-1080.bmp","icons-1080\battlefieldtraining-icon-1080.bmp","icons-1080\blackmarket-icon-1080.bmp","icons-1080\bouncingblades-icon-1080.bmp","icons-1080\cantstopwontstop-icon-1080.bmp","icons-1080\clocksetter-icon-1080.bmp","icons-1080\crush-icon-1080.bmp","icons-1080\domination-icon-1080.bmp","icons-1080\dragonrage-icon-1080.bmp","icons-1080\duelist-icon-1080.bmp","icons-1080\emptymind-icon-1080.bmp","icons-1080\endurance-icon-1080.bmp","icons-1080\enfeeblingstrike-icon-1080.bmp","icons-1080\evolution-icon-1080.bmp","icons-1080\flexiblegameplan-icon-1080.bmp","icons-1080\grit-icon-1080.bmp","icons-1080\highereducation-icon-1080.bmp","icons-1080\holdthemoff-icon-1080.bmp","icons-1080\immortality-icon-1080.bmp","icons-1080\lilbuddies-icon-1080.bmp","icons-1080\manaflow-icon-1080.bmp","icons-1080\naturesfury-icon-1080.bmp","icons-1080\newstudent-icon-1080.bmp","icons-1080\outofthegates-icon-1080.bmp","icons-1080\raidingparty-icon-1080.bmp","icons-1080\rockbearden-icon-1080.bmp","icons-1080\rushthemdown-icon-1080.bmp","icons-1080\seatofpower-icon-1080.bmp","icons-1080\sharedbounty-icon-1080.bmp","icons-1080\sharingiscaring-icon-1080.bmp","icons-1080\sorcery-icon-1080.bmp","icons-1080\sorcery-icon-1080.bmp","icons-1080\spellslinger-icon-1080.bmp","icons-1080\terraforming-icon-1080.bmp","icons-1080\thebestdefense-icon-1080.bmp","icons-1080\thievestools-icon-1080.bmp","icons-1080\triferianmight-icon-1080.bmp","icons-1080\vanguardlookout-icon-1080.bmp","icons-1080\welcomegifts-icon-1080.bmp","icons-1080\wildcreation-icon-1080.bmp","icons-1080\yippgenius-icon-1080.bmp"]
+IconListHD :=  ["icons-768\advancedpreperations-icon-768.bmp","icons-768\battlefieldtraining-icon-768.bmp","icons-768\blackmarket-icon-768.bmp","icons-768\bouncingblades-icon-768.bmp","icons-768\cantstopwontstop-icon-768.bmp","icons-768\clocksetter-icon-768.bmp","icons-768\crush-icon-768.bmp","icons-768\domination-icon-768.bmp","icons-768\dragonrage-icon-768.bmp","icons-768\duelist-icon-768.bmp","icons-768\emptymind-icon-768.bmp","icons-768\endurance-icon-768.bmp","icons-768\enfeeblingstrike-icon-768.bmp","icons-768\evolution-icon-768.bmp","icons-768\flexiblegameplan-icon-768.bmp","icons-768\grit-icon-768.bmp","icons-768\highereducation-icon-768.bmp","icons-768\holdthemoff-icon-768.bmp","icons-768\immortality-icon-768.bmp","icons-768\lilbuddies-icon-768.bmp","icons-768\manaflow-icon-768.bmp","icons-768\naturesfury-icon-768.bmp","icons-768\newstudent-icon-768.bmp","icons-768\outofthegates-icon-768.bmp","icons-768\raidingparty-icon-768.bmp","icons-768\rockbearden-icon-768.bmp","icons-768\rushthemdown-icon-768.bmp","icons-768\seatofpower-icon-768.bmp","icons-768\sharedbounty-icon-768.bmp","icons-768\sharingiscaring-icon-768.bmp","icons-768\sorcery-icon-768.bmp","icons-768\sorcery-icon-768.bmp","icons-768\spellslinger-icon-768.bmp","icons-768\terraforming-icon-768.bmp","icons-768\thebestdefense-icon-768.bmp","icons-768\thievestools-icon-768.bmp","icons-768\triferianmight-icon-768.bmp","icons-768\vanguardlookout-icon-768.bmp","icons-768\welcomegifts-icon-768.bmp","icons-768\wildcreation-icon-768.bmp","icons-768\yippgenius-icon-768.bmp"]
 
 ;--------------------------------------------------------------------------------------------------
 ; Runtime Variables
@@ -54,7 +58,7 @@ myPassive := "icons-1080\advancedpreperations-icon-1080.bmp"
 ;helps with image recognition,  increase if icon isn't working, max 255
 imageVariation :=  165 
 ;
-Resolution := 1 ; 1= 1080, 2=1440
+Resolution := 1 ; 1= 1080, 2=1440, 3= 768
 ; Delays between searching for new passive
 BaseDelay := 250
 Delay := 0
@@ -76,7 +80,7 @@ Gui, Font, Times New Roman, s30, cwhite
 
 
 ;Resolution dropdown box
-Gui, add , DropDownList, xm y165 w140 AltSubmit vResolution gSubmitResolution , 1920x1080||2560x1440|
+Gui, add , DropDownList, xm y165 w140 AltSubmit vResolution gSubmitResolution , 1920x1080||2560x1440|1366x768
 
 ;passive dropdown box
 Gui, add , DropDownList, xm y205 w260 AltSubmit vPassive gSubmitPassive , Advanced Preperations||Battlefield Training|Black Market Discount|Bouncing Blades|Can't Stop; Won't Stop|Clock Setter|Crush|Domination|Dragon's Rage|Duelist|Empty Mind|Endurance|Enfeebling Strike|Evolution|Flexible Gameplan|Grit|Higher Education|Hold Them Off|Immortality|Lil' Buddies|Manaflow|Nature's Revenge|New Student|Out the Gates|Raiding Party|Rockbear Den|Rush Them Down|Seat of Power|Share the Bounty|Sharing is Caring|Sorcery|Slow But Steady|Spellslinger|Terraforming|The Best Defense...|Thieves' Tools|Trifarian Might|Vanguard Lookout|Welcome Gifts|Wild Inspiration|Yipp's Genius|
@@ -114,9 +118,22 @@ SubmitPassive:
 	Gui,Submit,NoHide
 	
 	if(Resolution==1)
-	myPassive := IconListFHD[Passive]
+	{
+		myPassive := IconListFHD[Passive]
+		imageVariation=165
+	}
+	
 	if(Resolution==2)
-	myPassive := IconListWQHD[Passive]
+	{
+		myPassive := IconListWQHD[Passive]
+		imageVariation=145
+	}
+	if(Resolution==3)
+	{
+		myPassive := IconListHD[Passive]
+		imageVariation=185
+	}
+	
 	
 	;msgbox,% myPassive
 	return
@@ -129,6 +146,8 @@ SubmitResolution:
 	myPassive := IconListFHD[Passive]
 	if(Resolution==2)
 	myPassive := IconListWQHD[Passive]
+	if(Resolution==3)
+	myPassive := IconListHD[Passive]
 	
 	;msgbox,% Resolution
 	return
@@ -164,6 +183,9 @@ while(true)
 	
 	else if(Resolution==2)
 	ImageSearch, FoundX, FoundY, 621,577, 817,790, *%imageVariation% %myPassive%	
+	
+	else if(Resolution==3)
+	ImageSearch, FoundX, FoundY, 331,307, 437,421, *%imageVariation% %myPassive%	
 		
 		if(ErrorLevel = 0) ;if match, then reset current attempt counter and start run
 		{
@@ -180,6 +202,10 @@ while(true)
 	else if(Resolution==2)
 	ImageSearch, FoundX, FoundY, 1247,577, 1443,790, *%imageVariation% %myPassive% 
 	
+	else if(Resolution==3)
+	ImageSearch, FoundX, FoundY, 665,307, 770,421, *%imageVariation% %myPassive%	
+	
+	
 	if(ErrorLevel = 0)
 		{
 			MouseClick, left, PassiveListX[Passive2]*ResolutionScaleX[Resolution], PassiveY*ResolutionScaleY[Resolution] 
@@ -195,6 +221,10 @@ while(true)
 	
 	else if(Resolution==2)
 	ImageSearch, FoundX, FoundY, 1873,577, 2069,790, *%imageVariation% %myPassive% 
+	
+	else if(Resolution==3)
+	ImageSearch, FoundX, FoundY, 999,307, 1104,421, *%imageVariation% %myPassive%	
+	
 	
 	if(ErrorLevel = 0)
 		{
