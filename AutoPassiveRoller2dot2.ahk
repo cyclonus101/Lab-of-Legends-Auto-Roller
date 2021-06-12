@@ -39,8 +39,8 @@ Passive3 := 3
 RerollX:= 1900
 RerollY:= 1225
 
-ResolutionScaleX := [.75, 1]
-ResolutionScaleY := [.75, 1]
+ResolutionScaleX := [.75, 1,.534]
+ResolutionScaleY := [.75, 1,.534]
 
 ;IconList :=  ["blackmarket-icon-1440.bmp","cantstopwontstop-icon-1440.bmp","domination-icon-1440.bmp","dragonrage-icon-1440.bmp","duelist-icon-1440.bmp","emptymind-icon-1440.bmp","enfeeblingstrike-icon-1440.bmp","evolution-icon-1440.bmp","flexiblegameplan-icon-1440.bmp","grit-icon-1440.bmp","highereducation-icon-1440.bmp","immortality-icon-1440.bmp","lilbuddies-icon-1440.bmp","manaflow-icon-1440.bmp","naturesfury-icon-1440.bmp","outofthegates-icon-1440.bmp","sharedbounty-icon-1440.bmp","sorcery-icon-1440.bmp","spellslinger-icon-1440.bmp","thebestdefense-icon-1440.bmp","triferianmight-icon-1440.bmp","wildcreation-icon-1440.bmp","yippgenius-icon-1440.bmp"]
 ;IconListWQHD :=  ["icons-1440\blackmarket-icon-1440.bmp","icons-1440\cantstopwontstop-icon-1440.bmp","icons-1440\domination-icon-1440.bmp","icons-1440\dragonrage-icon-1440.bmp","icons-1440\duelist-icon-1440.bmp","icons-1440\emptymind-icon-1440.bmp","icons-1440\enfeeblingstrike-icon-1440.bmp","icons-1440\evolution-icon-1440.bmp","icons-1440\flexiblegameplan-icon-1440.bmp","icons-1440\grit-icon-1440.bmp","icons-1440\highereducation-icon-1440.bmp","icons-1440\immortality-icon-1440.bmp","icons-1440\lilbuddies-icon-1440.bmp","icons-1440\manaflow-icon-1440.bmp","icons-1440\naturesfury-icon-1440.bmp","icons-1440\outofthegates-icon-1440.bmp","icons-1440\sharedbounty-icon-1440.bmp","icons-1440\sorcery-icon-1440.bmp","icons-1440\spellslinger-icon-1440.bmp","icons-1440\thebestdefense-icon-1440.bmp","icons-1440\triferianmight-icon-1440.bmp","icons-1440\wildcreation-icon-1440.bmp","icons-1440\yippgenius-icon-1440.bmp"]
