@@ -22,6 +22,9 @@ June 10/21
 -Fixed typo in evolution passive icon name  
 -Changed the delay text and delay dropdown box to align next to each other in the GUI  
 
+June 12/21
+-Added 1366z768 support
+
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
 Required: Only works on windows 7 or newer and requires AutoHotKey to be installed
