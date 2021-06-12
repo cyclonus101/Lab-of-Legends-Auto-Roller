@@ -23,7 +23,8 @@ June 10/21
 -Changed the delay text and delay dropdown box to align next to each other in the GUI  
 
 June 12/21
--Added 1366z768 support
+-Added 1366x768 support
+-Fixed some typos
 
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
@@ -34,7 +35,7 @@ Instructions:
 1) Download as zip file
 2) Unzip project into a folder
 3) Double click the AutoPassiveRoller2dot2.ahk file to start up the GUI (start script from the folder)
-4) Select Resolution (1920x1080 or 2560x1440 is currently supported)
+4) Select Resolution (1920x1080 or 2560x1440 or 1366x768 is currently supported) 
 6) Select Passive
 7) Select additional delay if the script runs too fast between scenes
 9) Pick a champ to play in the labs mode
