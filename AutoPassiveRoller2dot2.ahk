@@ -5,17 +5,20 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #SingleInstance, force
 
+;Created by cyclonus101
+
 ; 2.0 June 2/21
 ; Got rid of selecting champion, focuses exclusively on finding the correct passive
 ; 2.1 June 6/12
 ; Updated GUI to be more concise with search delays and fixed double clicking passives 
 ; 2.2 June 7/21
 ;Fixed bug where changing passives before changing resolution would not switch image search to new resolution
-
-
 ; June 12/21
 ;Added 1368x1768 support
-;Created by cyclonus101
+;Fixed many typos between the script and image files
+; June 24/21
+;Received comments about auto roller skipping powers so-
+;Added loops to the image search to hopefully improve accuracy
 
 ;--------------------------------------------------------------------------------------------------
 ; Hardcoded Variables
@@ -68,6 +71,8 @@ DelayResolution := 25
 currentattempts := 0
 totalattempts := 0
 totalfinds := 0
+
+LoopAttempts := 0 ; retry finding icons 
 
 ;--------------------------------------------------------------------------------------------------
 ; GUI Stuff
@@ -178,6 +183,11 @@ while(true)
 	sleep BaseDelay + (Delay*DelayResolution)	
 	
 	
+	LoopAttempts = 3
+	
+	while(--LoopAttempts)
+	{
+	
 	;Image Search 1st icon
 	if(Resolution==1)
 	ImageSearch, FoundX, FoundY, 466,432, 616,592, *%imageVariation% %myPassive%	
@@ -233,7 +243,8 @@ while(true)
 			sleep  200
 	
 			return
-		}	
+		}
+	}
 		
 }
 
