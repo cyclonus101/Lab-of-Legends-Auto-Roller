@@ -24,7 +24,7 @@ June 12/21
 -Added 1366x768 support  
 -Fixed some typos  
 June 24/21  
--Added loops to image search to reduce chance of accidentally skipping power 
+-Added loops to image search to reduce chance of accidentally skipping power   
 -As a result you may see the mouse click multiple times
 
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
