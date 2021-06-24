@@ -20,10 +20,10 @@ Got rid of selecting champion, focuses exclusively on finding the correct passiv
 June 10/21  
 -Fixed typo in evolution passive icon name  
 -Changed the delay text and delay dropdown box to align next to each other in the GUI  
-June 12/21
+June 12/21  
 -Added 1366x768 support  
 -Fixed some typos  
-June 24/21
+June 24/21  
 -Added loops to image search to reduce chance of accidentally skipping power 
 -As a result you may see the mouse click multiple times
 
