@@ -17,14 +17,15 @@ Got rid of selecting champion, focuses exclusively on finding the correct passiv
 -fixed the visual issue where the passive is double click  
 2.2 June 7/21  
 -Fixed bug where changing passives before changing resolution would not switch image search to new resolution
-
 June 10/21  
 -Fixed typo in evolution passive icon name  
 -Changed the delay text and delay dropdown box to align next to each other in the GUI  
-
 June 12/21
 -Added 1366x768 support  
 -Fixed some typos  
+June 24/21
+-Added loops to image search to reduce chance of accidentally skipping power 
+-As a result you may see the mouse click multiple times
 
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
