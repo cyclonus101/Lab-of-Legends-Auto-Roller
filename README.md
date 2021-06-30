@@ -25,7 +25,11 @@ June 12/21
 -Fixed some typos  
 June 24/21  
 -Added loops to image search to reduce chance of accidentally skipping power   
--As a result you may see the mouse click multiple times
+-As a result you may see the mouse click multiple times  
+; June 30/21
+; Added new powers to selection (counterfeit production / feral senses / lie in wait)
+; Changed background picture to reflect current labs
+; Fixed a typo  
 
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
