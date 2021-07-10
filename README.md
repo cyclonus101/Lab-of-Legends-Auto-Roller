@@ -9,6 +9,9 @@ a lot of changes have been made. You no longer need to reselect your champion to
 initial rerolls. You can now reroll infinitely after champion select.  
 This work is an update to the original to be functional with the new upgraded labs.  
 
+Link to demo:
+https://gfycat.com/rewardingflamboyantatlanticspadefish
+
 2.0 June 2/21  
 Got rid of selecting champion, focuses exclusively on finding the correct passive  
 2.1 June 6/12  
@@ -30,6 +33,10 @@ June 30/21
 Added new powers to selection (counterfeit production / feral senses / lie in wait)  
 Changed background picture to reflect current labs  
 Fixed a typo  
+July 10/21
+Added 1600x900 (not fully tested)
+Reverted delay resolution to steps of 50ms which seems to provide better accuracy
+Base delay was upped to 300ms
 
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
@@ -40,7 +47,7 @@ Instructions:
 1) Download as zip file
 2) Unzip project into a folder
 3) Double click the AutoPassiveRoller2dot2.ahk file to start up the GUI (start script from the folder)
-4) Select Resolution (1920x1080 or 2560x1440 or 1366x768 is currently supported) 
+4) Select Resolution (1920x1080 or 2560x1440 or 1366x768 or 1600x900 is currently supported) 
 6) Select Passive
 7) Select additional delay if the script runs too fast between scenes
 9) Pick a champ to play in the labs mode
