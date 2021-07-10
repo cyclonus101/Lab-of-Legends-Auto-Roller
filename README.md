@@ -13,11 +13,11 @@ Link to demo:
 https://gfycat.com/rewardingflamboyantatlanticspadefish
 
 2.0 June 2/21  
-Got rid of selecting champion, focuses exclusively on finding the correct passive  
+-Got rid of selecting champion, focuses exclusively on finding the correct passive  
 2.1 June 6/12  
 -Updated GUI to show base delay between searches   
 -Changed adjustable delay resolution to 25ms instead of 50ms, up to 200ms  
--fixed the visual issue where the passive is double click  
+-Fixed the visual issue where the passive is double click  
 2.2 June 7/21  
 -Fixed bug where changing passives before changing resolution would not switch image search to new resolution
 June 10/21  
@@ -30,13 +30,13 @@ June 24/21
 -Added loops to image search to reduce chance of accidentally skipping power   
 -As a result you may see the mouse click multiple times  
 June 30/21
-Added new powers to selection (counterfeit production / feral senses / lie in wait)  
-Changed background picture to reflect current labs  
-Fixed a typo  
+-Added new powers to selection (counterfeit production / feral senses / lie in wait)  
+-Changed background picture to reflect current labs  
+-Fixed a typo  
 July 10/21  
-Added 1600x900 (not fully tested)  
-Reverted delay resolution to steps of 50ms which seems to provide better accuracy  
-Base delay was upped to 300ms  
+-Added 1600x900 (not fully tested)  
+-Reverted delay resolution to steps of 50ms which seems to provide better accuracy  
+-Base delay was upped to 300ms  
 
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
