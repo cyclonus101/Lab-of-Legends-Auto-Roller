@@ -12,13 +12,13 @@ This work is an update to the original to be functional with the new upgraded la
 Link to demo:
 https://gfycat.com/rewardingflamboyantatlanticspadefish
 
-2.0 June 2/21  
+June 2/21  
 -Got rid of selecting champion, focuses exclusively on finding the correct passive  
-2.1 June 6/12  
+June 6/12  
 -Updated GUI to show base delay between searches   
 -Changed adjustable delay resolution to 25ms instead of 50ms, up to 200ms  
 -Fixed the visual issue where the passive is double click  
-2.2 June 7/21  
+June 7/21  
 -Fixed bug where changing passives before changing resolution would not switch image search to new resolution
 June 10/21  
 -Fixed typo in evolution passive icon name  
