@@ -33,10 +33,10 @@ June 30/21
 Added new powers to selection (counterfeit production / feral senses / lie in wait)  
 Changed background picture to reflect current labs  
 Fixed a typo  
-July 10/21
-Added 1600x900 (not fully tested)
-Reverted delay resolution to steps of 50ms which seems to provide better accuracy
-Base delay was upped to 300ms
+July 10/21  
+Added 1600x900 (not fully tested)  
+Reverted delay resolution to steps of 50ms which seems to provide better accuracy  
+Base delay was upped to 300ms  
 
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
