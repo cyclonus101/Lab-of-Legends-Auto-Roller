@@ -46,7 +46,7 @@ Instructions:
 
 1) Download as zip file
 2) Unzip project into a folder
-3) Double click the AutoPassiveRoller2dot2.ahk file to start up the GUI (start script from the folder)
+3) Double click the AutoPassiveRoller.ahk file to start up the GUI (start script from the folder)
 4) Select Resolution (1920x1080 or 2560x1440 or 1366x768 or 1600x900 is currently supported) 
 6) Select Passive
 7) Select additional delay if the script runs too fast between scenes
