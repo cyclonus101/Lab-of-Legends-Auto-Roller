@@ -168,6 +168,8 @@ SubmitResolution:
 	myPassive := IconListWQHD[Passive]
 	if(Resolution==3)
 	myPassive := IconListHD[Passive]
+	if(Resolution==4)	
+	myPassive := IconListHDPLUS[Passive]
 	
 	;msgbox,% Resolution
 	return
