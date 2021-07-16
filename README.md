@@ -17,9 +17,9 @@ June 2/21
 June 6/12  
 -Updated GUI to show base delay between searches   
 -Changed adjustable delay resolution to 25ms instead of 50ms, up to 200ms  
--Fixed the visual issue where the passive is double click  
+-Fixed the visual issue where the passive is double clicked  
 June 7/21  
--Fixed bug where changing passives before changing resolution would not switch image search to new resolution
+-Fixed bug where changing passives before changing resolution would not switch image search to new resolution  
 June 10/21  
 -Fixed typo in evolution passive icon name  
 -Changed the delay text and delay dropdown box to align next to each other in the GUI  
@@ -29,12 +29,12 @@ June 12/21
 June 24/21  
 -Added loops to image search to reduce chance of accidentally skipping power   
 -As a result you may see the mouse click multiple times  
-June 30/21
+June 30/21  
 -Added new powers to selection (counterfeit production / feral senses / lie in wait)  
 -Changed background picture to reflect current labs  
--Fixed a typo  
+-Fixed more typos 
 July 10/21  
--Added 1600x900 (not fully tested)  
+-Added 1600x900  
 -Reverted delay resolution to steps of 50ms which seems to provide better accuracy  
 -Base delay was upped to 300ms  
 
