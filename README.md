@@ -37,6 +37,10 @@ July 10/21
 -Added 1600x900  
 -Reverted delay resolution to steps of 50ms which seems to provide better accuracy  
 -Base delay was upped to 300ms  
+August 8/21  
+-Riot finally changed sorcery icon, the script has been updated to recgonize slow but steady and sorcery seperately    
+-Menu starts in the middle of the screen now  
+-Added auto detect resolution feature  
 
 Function: Reroll passives until you find the one you're searchings for Lab of Legends (a Legends of Runeterra game mode)
 
@@ -59,7 +63,7 @@ then you should restart the script and Legends of Runeterra. Otherwise it probab
 Some bugs I've discovered so far:
 
 ~~1) If you switch to 2560x1440 you need to select Advanced Preparations in the passive menu again~~  
-2) Because Riot decided to reuse the sorcery icon for slow but steady, selecting either as your starter passive will select the first one it sees  
+~~2) Because Riot decided to reuse the sorcery icon for slow but steady, selecting either as your starter passive will select the first one it sees~~     
 3) Sometimes the icon will be skipped over its in a certain positive (I.E middle)   
 4) Sometimes the wrong passive might be selected  
 5) Error: Path to File Icon Not found generally means there's a typo in the script or icon image
