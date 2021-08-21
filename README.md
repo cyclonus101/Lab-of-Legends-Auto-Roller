@@ -32,7 +32,7 @@ June 24/21
 June 30/21  
 -Added new powers to selection (counterfeit production / feral senses / lie in wait)  
 -Changed background picture to reflect current labs  
--Fixed more typos 
+-Fixed more typos  
 July 10/21  
 -Added 1600x900  
 -Reverted delay resolution to steps of 50ms which seems to provide better accuracy  
